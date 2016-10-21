@@ -8,3 +8,6 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 /.project
+/.settings
+/my-bundle/.settings
+/my-bundle-test/.settings
