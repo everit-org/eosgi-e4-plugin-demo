@@ -12,14 +12,10 @@ import org.everit.osgi.ecm.extender.ExtendComponent;
 
 import my.MyService;
 
-@Component(
-           componentId = "MyComponent",
-           configurationPolicy = ConfigurationPolicy.REQUIRE)
+@Component(componentId = "MyComponent", configurationPolicy = ConfigurationPolicy.REQUIRE)
 @Service
 @ExtendComponent
-@StringAttributes(
-                  @StringAttribute(
-                                   attributeId = MyComponent.PREFIX))
+@StringAttributes(@StringAttribute(attributeId = MyComponent.PREFIX))
 public class MyComponent implements MyService {
 
     public static final String PREFIX = "prefix";
@@ -33,7 +29,10 @@ public class MyComponent implements MyService {
 
     @Override
     public String sayHello(final String name) {
-        return prefix + name;
+        if (name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("name cannot be null or empty");
+        }
+        return prefix + " " + name;
     }
 
 }

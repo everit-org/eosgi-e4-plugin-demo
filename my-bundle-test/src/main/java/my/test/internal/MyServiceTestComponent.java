@@ -35,9 +35,27 @@ public class MyServiceTestComponent {
     }
 
     @Test
-    public void testFoo() {
+    public void testSayHello() {
         String sayHello = myService.sayHello("John");
         Assert.assertEquals("Hello John", sayHello);
+    }
+
+    @Test
+    public void testSayHelloArgument() {
+
+        try {
+            myService.sayHello(null);
+            Assert.fail();
+        } catch (IllegalArgumentException e) {
+            Assert.assertTrue("name cannot be null or empty".equals(e.getMessage()));
+        }
+
+        //        try {
+        //            myService.sayHello("");
+        //            Assert.fail();
+        //        } catch (IllegalArgumentException e) {
+        //            Assert.assertTrue("name cannot be null or empty".equals(e.getMessage()));
+        //        }
     }
 
 }
