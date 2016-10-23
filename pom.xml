@@ -11,7 +11,8 @@
 
     <modules>
         <module>my-bundle</module>
-        <module>my-bundle-test</module>
+        <module>my-test-environment</module>
+        <module>my-test-bundle</module>
     </modules>
 
 </project>

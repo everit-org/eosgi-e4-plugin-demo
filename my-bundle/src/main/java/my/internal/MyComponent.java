@@ -9,6 +9,8 @@ import org.everit.osgi.ecm.annotation.Service;
 import org.everit.osgi.ecm.annotation.attribute.StringAttribute;
 import org.everit.osgi.ecm.annotation.attribute.StringAttributes;
 import org.everit.osgi.ecm.extender.ExtendComponent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import my.MyService;
 
@@ -17,6 +19,8 @@ import my.MyService;
 @ExtendComponent
 @StringAttributes(@StringAttribute(attributeId = MyComponent.PREFIX))
 public class MyComponent implements MyService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(MyComponent.class);
 
     public static final String PREFIX = "prefix";
 
@@ -32,7 +36,14 @@ public class MyComponent implements MyService {
         if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("name cannot be null or empty");
         }
-        return prefix + " " + name;
+
+        String hello = prefix + " " + name;
+
+        LOGGER.info("+++++++++++++++++++++++++++++++");
+        LOGGER.info(hello);
+        LOGGER.info("+++++++++++++++++++++++++++++++");
+
+        return hello;
     }
 
 }
