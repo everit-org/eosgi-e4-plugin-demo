@@ -50,12 +50,12 @@ public class MyServiceTestComponent {
             Assert.assertTrue("name cannot be null or empty".equals(e.getMessage()));
         }
 
-        //        try {
-        //            myService.sayHello("");
-        //            Assert.fail();
-        //        } catch (IllegalArgumentException e) {
-        //            Assert.assertTrue("name cannot be null or empty".equals(e.getMessage()));
-        //        }
+        try {
+            myService.sayHello("");
+            Assert.fail();
+        } catch (IllegalArgumentException e) {
+            Assert.assertTrue("name cannot be null or empty".equals(e.getMessage()));
+        }
     }
 
 }
