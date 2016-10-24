@@ -29,6 +29,9 @@ public class MyComponent implements MyService {
     @Activate
     public void activate(final Map<String, Object> attributes) {
         prefix = (String) attributes.get(PREFIX);
+        LOGGER.info("+++++++++++++++++++++++++++++++");
+        LOGGER.info(MyComponent.class.getSimpleName() + " activated");
+        LOGGER.info("+++++++++++++++++++++++++++++++");
     }
 
     @Override

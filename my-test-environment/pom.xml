@@ -34,28 +34,36 @@
                                     <httpPort>-Dorg.osgi.service.http.port=-1</httpPort>
                                     <httpsPort>-Dorg.osgi.service.http.port.secure=4848</httpsPort>
                                     <systemPackages>-Djavax.imageio,javax.management.openmbean,javax.management,javax.naming.ldap,javax.naming,javax.net.ssl,javax.security.auth.x500,javax.security.auth,javax.security.cert,javax.sql,javax.xml.parsers,javax.xml.transform.dom,javax.xml.transform.stream,javax.xml.transform,org.ietf.jgss,org.w3c.dom,org.xml.sax,</systemPackages>
-                                    <jacoco>-javaagent:jacoco/jacocoagent.jar=includes=my.*,output=tcpserver</jacoco>
+<!-- TODO STEP-100 -->
+<!--                                     <jacoco>-javaagent:jacoco/jacocoagent.jar=includes=my.*,output=tcpserver</jacoco> -->
                                 </vmArguments>
                             </launchConfig>
-                            <artifacts>
-                                <artifact>
-                                    <coordinates>org.jacoco:org.jacoco.agent:jar:runtime:0.7.7.201606060606</coordinates>
-                                    <targetFolder>jacoco</targetFolder>
-                                    <targetFile>jacocoagent.jar</targetFile>
-                                </artifact>
-                            </artifacts>
+<!-- TODO STEP-110 -->
+<!--                             <artifacts> -->
+<!--                                 <artifact> -->
+<!--                                     <coordinates>org.jacoco:org.jacoco.agent:jar:runtime:0.7.7.201606060606</coordinates> -->
+<!--                                     <targetFolder>jacoco</targetFolder> -->
+<!--                                     <targetFile>jacocoagent.jar</targetFile> -->
+<!--                                 </artifact> -->
+<!--                             </artifacts> -->
+<!-- TODO STEP-120 eclipse coverage session -->
                         </environment>
                     </environments>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>integration-test</id>
-                        <phase>integration-test</phase>
-                        <goals>
-                            <goal>integration-test</goal>
-                        </goals>
-                    </execution>
-                </executions>
+<!-- TODO STEP-50 integartion-test -->
+<!--                 <executions> -->
+<!--                     <execution> -->
+<!--                         <id>integration-test</id> -->
+<!--                         <phase>integration-test</phase> -->
+<!--                         <goals> -->
+<!--                             <goal>integration-test</goal> -->
+<!--                         </goals> -->
+<!--                     </execution> -->
+<!--                 </executions> -->
+<!-- TODO STEP-60 config change -->
+<!-- TODO STEP-70 fix unit test -->
+<!-- TODO STEP-80 dist -->
+<!-- TODO STEP-90 synch back -->
             </plugin>
         </plugins>
     </build>
@@ -67,11 +75,16 @@
             <artifactId>my.bundle</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>my</groupId>
-            <artifactId>my.test.bundle</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+<!-- TODO STEP-00 start -->
+<!-- TODO STEP-10 stop and debug -->
+<!-- TODO STEP-20 stop and start -->
+<!-- TODO STEP-30 add dependency -->
+<!--         <dependency> -->
+<!--             <groupId>my</groupId> -->
+<!--             <artifactId>my.test.bundle</artifactId> -->
+<!--             <version>${project.version}</version> -->
+<!--         </dependency> -->
+<!-- TODO STEP-40 dist -->
 
         <dependency>
             <groupId>org.apache.felix</groupId>
