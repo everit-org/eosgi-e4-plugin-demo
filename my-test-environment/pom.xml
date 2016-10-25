@@ -34,11 +34,13 @@
                                     <httpPort>-Dorg.osgi.service.http.port=-1</httpPort>
                                     <httpsPort>-Dorg.osgi.service.http.port.secure=4848</httpsPort>
                                     <systemPackages>-Djavax.imageio,javax.management.openmbean,javax.management,javax.naming.ldap,javax.naming,javax.net.ssl,javax.security.auth.x500,javax.security.auth,javax.security.cert,javax.sql,javax.xml.parsers,javax.xml.transform.dom,javax.xml.transform.stream,javax.xml.transform,org.ietf.jgss,org.w3c.dom,org.xml.sax,</systemPackages>
-<!-- TODO STEP-110 jacoco agent configuration-->
+<!-- TODO STEP-100 jacoco agent configuration-->
 <!--                                     <jacoco>-javaagent:jacoco/jacocoagent.jar=includes=my.*,output=tcpserver</jacoco> -->
+<!-- TODO STEP-110 restart required -->
+<!-- TODO STEP-120 eclipse coverage session -->
                                 </vmArguments>
                             </launchConfig>
-<!-- TODO STEP-100 jacoco artifact -->
+<!-- TODO STEP-90 jacoco artifact -->
 <!--                             <artifacts> -->
 <!--                                 <artifact> -->
 <!--                                     <coordinates>org.jacoco:org.jacoco.agent:jar:runtime:0.7.7.201606060606</coordinates> -->
@@ -46,24 +48,9 @@
 <!--                                     <targetFile>jacocoagent.jar</targetFile> -->
 <!--                                 </artifact> -->
 <!--                             </artifacts> -->
-<!-- TODO STEP-120 eclipse coverage session -->
                         </environment>
                     </environments>
                 </configuration>
-<!-- TODO STEP-50 integartion-test -->
-<!--                 <executions> -->
-<!--                     <execution> -->
-<!--                         <id>integration-test</id> -->
-<!--                         <phase>integration-test</phase> -->
-<!--                         <goals> -->
-<!--                             <goal>integration-test</goal> -->
-<!--                         </goals> -->
-<!--                     </execution> -->
-<!--                 </executions> -->
-<!-- TODO STEP-60 config change -->
-<!-- TODO STEP-70 fix unit test -->
-<!-- TODO STEP-80 dist -->
-<!-- TODO STEP-90 synch back -->
             </plugin>
         </plugins>
     </build>
@@ -85,6 +72,10 @@
 <!--             <version>${project.version}</version> -->
 <!--         </dependency> -->
 <!-- TODO STEP-40 dist -->
+<!-- TODO STEP-50 config change -->
+<!-- TODO STEP-60 synch back -->
+<!-- TODO STEP-70 fix unit test -->
+<!-- TODO STEP-80 dist -->
 
         <dependency>
             <groupId>org.apache.felix</groupId>
