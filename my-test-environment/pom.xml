@@ -62,7 +62,8 @@
             <artifactId>my.bundle</artifactId>
             <version>${project.version}</version>
         </dependency>
-<!-- TODO STEP-00 start -->
+<!-- TODO STEP-00 project introduction -->
+<!-- TODO STEP-05 start -->
 <!-- TODO STEP-10 stop and debug -->
 <!-- TODO STEP-20 stop and start -->
 <!-- TODO STEP-30 add dependency -->
